@@ -1,0 +1,1497 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Eiser ecommerce</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Roboto", sans-serif;
+
+        }
+
+
+        .header {
+            /* background: #f6f6f6; */
+            background-color: #ffff;
+            min-width: 1400px;
+        }
+
+        .container {
+            height: 30px;
+            position: relative;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        .cont {
+            background-color: #f6f6f6;
+        }
+
+        .header-left {
+            display: flex;
+            position: absolute;
+            left: 0px;
+        }
+
+        .header-left p {
+            margin: 10px 15px;
+        }
+
+        .header-right ul {
+            display: flex;
+            position: absolute;
+            right: 0px;
+            list-style: none;
+        }
+
+        .header-right ul li {
+            margin: 10px 25px;
+        }
+
+        .header-right ul li a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .header-down {
+            height: 15vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            position: relative;
+            left: 180px;
+        }
+
+        .bar ul {
+            display: flex;
+            margin: 10px 205px;
+            padding: 0px 20px;
+            list-style: none;
+
+        }
+
+        .bar ul li a {
+            text-decoration: none;
+            color: black;
+            margin: 0px 40px;
+        }
+
+        .bar-right ul li a:hover {
+            color: #71cd14;
+        }
+
+        .icon {
+            font-size: 16px;
+            line-height: 40px;
+            color: #4a4a4a;
+            margin: 0px 10px;
+        }
+
+        .bar-right ul {
+            display: flex;
+            list-style: none;
+        }
+
+        .header-bar-right {
+            display: flex;
+        }
+
+        .burger {
+            display: none;
+        }
+
+        .burger button {
+            margin-left: 30rem;
+            color: #1641ff;
+            border: none;
+            font-size: 30px;
+            margin-top: 10px;
+        }
+
+        .section-page {
+            background: url(https://themewagon.github.io/eiser/img/banner/banner-bg.jpg) no-repeat center bottom;
+            background-size: cover;
+            min-height: 900px;
+            min-width: 1400px;
+            z-index: 1;
+        }
+
+        .section-container {
+            min-height: 900px;
+            position: relative;
+            width: 100%;
+        }
+
+        .d-flex {
+            display: flex !important;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .text-image {
+            /* margin-left: 200px; */
+            color: #ffff;
+            width: 100%;
+            padding-left: 180px;
+            padding-right: 150px;
+        }
+
+        .text-image h3 {
+            font-size: 14px;
+            color: #ffff;
+        }
+
+        .text-image h1 {
+            font-size: 52px;
+            font-weight: 700;
+            margin: 15px -3px;
+        }
+
+        .text-image h1 span {
+            color: #71cd14;
+        }
+
+        .text-image p {
+            font-size: 25px;
+            font-weight: normal;
+        }
+
+        .collection {
+            margin-top: 40px;
+        }
+
+        .collection button {
+            background-color: #71cd14;
+            color: #ffff;
+            font-size: 14px;
+            padding: 15px 25px;
+            font-weight: 500;
+            text-transform: uppercase;
+            border: none;
+            border-radius: 6px;
+        }
+
+        .collection button:hover {
+            background-color: transparent;
+            color: #71cd14;
+            border: 1px solid #71cd14;
+        }
+
+        /* .ali{
+           position: relative;
+           width: 100%;
+           margin-left:auto;
+           margin-right: auto;
+         } */
+        .inner-section {
+            margin: 30px 180px;
+            display: flex;
+            flex-wrap: wrap;
+            /* justify-content: center; */
+        }
+
+        .box-1 {
+            padding: 30px 30px;
+            border: 1px solid #eff2ef;
+            /* display: inline-block; */
+            font-weight: 500;
+            margin-left: 43px;
+        }
+
+        .box-1 h3 {
+            margin-top: 25px;
+        }
+
+        .box-1 p {
+            margin-top: 30px;
+            color: #797979;
+
+        }
+
+        .inner-box {
+            /* margin: 16px 0px; */
+            margin-bottom: 20px;
+            text-align: center;
+            text-transform: capitalize;
+        }
+
+        .inner-box a {
+            color: #4a4a4a;
+            font-size: 35px;
+        }
+
+        .section-2 {
+            min-width: 1400px;
+        }
+
+
+        .feature-text {
+            text-align: center;
+            margin-top: 80px;
+        }
+
+        .main-text span {
+            font-size: 24px;
+            font-weight: 700;
+            color: #2a2a2a;
+            padding: 15px 10px;
+            box-shadow: 0px 3px rgb(186, 184, 184);
+        }
+
+        .feature-text p {
+            margin-top: 35px;
+            color: #797979;
+        }
+
+        .product-container {
+            padding-right: 150px;
+            padding-left: 150px;
+        }
+
+        .row {
+            display: flex;
+            margin-top: 80px;
+        }
+
+        .product-1 {
+            position: relative;
+            left: 0px;
+        }
+        .hover-view {
+            /* height: 45px; */
+            position: relative;
+            top: -100px;
+            width: 90%;
+            text-align: center;
+            padding: 20px 0px;
+            background-color: rgba(113, 205, 20, 0.4);
+            margin-left: 20px;
+            display: none;
+        }
+
+        .hover-view a {
+            font-size: 15px;
+            margin-right: 20px;
+            color: black;
+            border-radius: 45px;
+            background-color: white;
+            padding: 8px 8px;
+            
+        }
+
+        .text-box {
+            /* border: 2px solid black; */
+            height: 100px;
+            position: relative;
+            bottom: 100px;
+            width: 100%;
+            background-color: #ffff;
+        }
+
+        .text-box a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .text-box h3 {
+            padding: 15px 0px;
+            margin-left: 25px;
+            color: #4a4a4a;
+            font-weight: normal;
+            font-size: 15px;
+
+        }
+
+        .price {
+            margin-left: 25px;
+            font-size: 25px;
+            font-weight: 700;
+        }
+
+        .d-price {
+            margin-left: 25px;
+            font-size: 15px;
+            color: #4a4a4a;
+        }
+
+        .second {
+            margin-left: 30px;
+        }
+
+        .third {
+            margin-left: 30px;
+        }
+
+        .first:hover .hover-view {
+            display: block;
+        }
+
+        .second:hover .hover-view {
+            display: block;
+        }
+
+        .third:hover .hover-view {
+            display: block;
+        }
+
+        .hover-view a:hover {
+            background-color: #71cd14;
+            color: white;
+        }
+
+        .discover button {
+            background-color: #71cd14;
+            color: #ffff;
+            font-size: 14px;
+            padding: 15px 25px;
+            font-weight: 500;
+            text-transform: uppercase;
+            border: none;
+            border-radius: 6px;
+            margin: 30px;
+        }
+
+        .offers {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .discover button:hover {
+            background-color: transparent;
+            color: #71cd14;
+            border: 1px solid #71cd14;
+        }
+
+        .offer-area {
+            background: url(https://themewagon.github.io/eiser/img/offer-bg.png);
+            min-height: 500px;
+            position: relative;
+            text-align: center;
+            background-size: cover;
+        }
+
+        .offer {
+            position: absolute;
+            right: 300px;
+            top: 50px;
+        }
+
+        .offer h1 {
+            font-size: 100px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #2a2a2a;
+            margin-top: 40px;
+        }
+
+        .offer h4 {
+            font-size: 24px;
+            color: #4a4a4a;
+            font-weight: 300;
+        }
+
+        .offer p {
+            color: #797979;
+        }
+
+        .new-product {
+            /* height: 800px; */
+            padding-right: 150px;
+            padding-left: 150px;
+        }
+
+        .rows {
+            /* height: 800px; */
+            margin-top: 80px;
+            margin-left: 100px;
+            display: flex;
+        }
+
+        .col-1 {
+            text-align: center;
+            background-color: #f6f6f6;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 50px 0px;
+        }
+
+        .upper-text {
+            margin: 40px 0px;
+            color: #2a2a2a;
+        }
+
+        .upper-text h1 {
+            margin: 30px;
+            font-size: 32px;
+            color: #2a2a2a;
+        }
+
+        .main-button {
+            background-color: #71cd14;
+            color: #ffff;
+            font-size: 14px;
+            padding: 15px 25px;
+            font-weight: 700;
+            text-transform: uppercase;
+            border: none;
+            border-radius: 6px;
+            margin-bottom: 30px;
+            text-decoration: none;
+        }
+
+        .main-button:hover {
+            background-color: transparent;
+            color: #71cd14;
+            border: 1px solid #71cd14;
+        }
+
+        .lower-text {
+            margin-top: 60px;
+        }
+
+        .lower-text h1 {
+            margin: 40px;
+            font-weight: 400;
+        }
+
+        .col-2 {
+            margin-left: 25px;
+            margin-bottom: 20px;
+            /* height: 100%; */
+            /* width: 50%; */
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .text-boxes {
+            background-color: #ffff;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            bottom: 0px;
+        }
+
+        .text-boxes a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .text-boxes h3 {
+            /* padding: 15px 0px; */
+            margin-left: 25px;
+            color: #4a4a4a;
+            font-weight: normal;
+            font-size: 15px;
+
+        }
+
+        .hover-views {
+            position: relative;
+            width: 100%;
+
+        }
+
+        .hover-views a {
+            font-size: 15px;
+            margin-right: 20px;
+            color: black;
+            border-radius: 45px;
+            background-color: white;
+            padding: 8px 8px;
+        }
+
+        .hov {
+            text-align: center;
+            padding: 10px 0px;
+            background-color: rgba(113, 205, 20, 0.4);
+            transition: all 0.8s ease-in-out;
+        }
+
+        .firsts:hover .hov {
+
+            transform: translateY(-40px);
+        
+        }
+
+        .seconds:hover .hov {
+            transform: translateY(-40px);
+        }
+
+        .firsts {
+            margin: 50px 50px;
+        }
+        .seconds{
+            margin: 50px 0px;
+        }
+
+        .hover-views a:hover {
+            color: #71cd14;
+        }
+
+        .product-row {
+            margin-top: 80px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .blog-1 {
+            display: flex;
+        }
+
+        .detail-a {
+            margin: 0px 40px;
+        }
+
+        .detail {
+            margin: 5px 10px;
+        }
+
+        .detail a {
+            text-decoration: none;
+            font-size: 14px;
+            color: #797979;
+            padding: 0px 5px;
+        }
+
+        .blog-1 {
+            margin: 80px 40px;
+        }
+
+        .d-block a {
+            text-decoration: none;
+            color: #2a2a2a;
+            font-size: 20px;
+        }
+
+        .d-block {
+            margin: 20px 15px;
+
+        }
+
+        .text-wrap {
+            color: #797979;
+            margin: 20px 15px;
+        }
+
+        .blog-button {
+            margin: 20px 15px;
+            font-size: 20px;
+        }
+
+        .blog-button a {
+            text-decoration: none;
+            color: #2a2a2a;
+            font-weight: 500;
+            margin-right: 5px;
+        }
+
+        .blog-button :hover {
+            color: #71cd14;
+
+        }
+
+        .column1 {
+            margin: 25px;
+        }
+
+        .product-image:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            background: #0d0d1f;
+            height: 500px;
+        }
+
+        .top-product ul {
+            color: white;
+            list-style: none;
+            margin-left: 90px;
+            text-transform: capitalize;
+        }
+
+        .top-product ul li a {
+            color: #797979;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .top-product ul li a:hover {
+            color: white;
+        }
+
+        .top-product ul h4 {
+            font-size: 20px;
+            text-decoration: none;
+            color: white;
+            list-style: none;
+
+        }
+
+        .top-product {
+            margin-top: 100px;
+        }
+
+        .product-rows {
+            display: flex;
+        }
+
+        .top-product ul li {
+            margin: 30px 0px;
+        }
+
+        form input[type="email"] {
+            height: 50px;
+            width: 70%;
+            background-color: rgb(255, 255, 255, 0.15);
+            border: none;
+            font-size: 14px;
+            padding: 10px;
+            color: #ffff;
+            font-weight: 300;
+            outline: none;
+        }
+
+        form input[type="button"] {
+            font-size: 12px;
+            text-transform: uppercase;
+            background: #71cd14;
+            color: #ffffff;
+            padding: 10px 9px;
+            border: 0;
+            position: relative;
+            left: -12%;
+        }
+
+        .para {
+            color: #797979;
+        }
+
+        .footer-bottom {
+            display: flex;
+            margin-left: 35px;
+        }
+
+        .footer-text {
+            color: #ffffff;
+            margin: 30px 50px;
+        }
+
+        .footer-logo {
+            margin: 30px 220px;
+        }
+
+        .footer-logo a {
+            background-color: rgb(255, 255, 255, 0.15);
+            padding: 15px 15px;
+            color: #ffffff;
+        }
+
+        .footer-logo a:hover {
+            background-color: #71cd14;
+        }
+
+        @media (max-width:1444px) {
+            .box-1 {
+                margin: 12px;
+            }
+        }
+
+        @media (max-width:1400px) {
+            .feature-text {
+                position: relative;
+                left: 213px;
+            }
+        }
+
+        @media (max-width:768px) {
+            .feature-text {
+                position: relative;
+                left: 313px;
+            }
+
+            .box-1 {
+                width: 47%;
+                height: 100%;
+            }
+        }
+
+        @media (max-width:426px) {
+            .feature-text {
+                position: relative;
+                left: 550px;
+            }
+
+            .main-text s {
+                min-height: 0px;
+            }
+
+            .box-1 {
+                width: 100%;
+                height: 100%;
+                font-size: 70px;
+                padding: 150px 0px;
+            }
+
+            .inner-box a {
+                font-size: 100px;
+            }
+            .row{
+                display: block;
+                margin-left: 250px;
+            }
+            .first{
+                font-size: 150px;
+            }
+        }
+
+        @media(max-width:992px) {
+            .header-right {
+                display: none;
+            }
+
+            .header-left {
+                left: 100px;
+            }
+
+            .header-bar-right {
+                display: none;
+            }
+
+            .burger {
+                display: block;
+            }
+        }
+
+        @media (max-width:860px) {
+            .section-page {
+                min-height: 1000px;
+            }
+
+            .d-flex {
+                align-items: end;
+            }
+
+            .text-image {
+                padding-left: 75px;
+            }
+        }
+
+        @media (max-width:788px) {
+            .section-page {
+                min-height: 1200px;
+            }
+        }
+
+        @media (max-width: 670px) {
+            .section-page {
+                min-height: 1400px;
+            }
+        }
+
+        @media (max-width: 588px) {
+            .section-page {
+                min-height: 1500px;
+            }
+
+            .d-flex {
+                align-items: end;
+            }
+
+            .text-image {
+                padding-left: 75px;
+            }
+        }
+
+        @media (max-width: 350px) {
+            .section-page {
+                min-width: 1300px;
+            }
+
+            .d-flex {
+                align-items: end;
+            }
+
+            .text-image {
+                padding-left: 75px;
+            }
+        }
+
+        @media (max-width:290px) {
+            .inner-section {
+                margin-right: 430px;
+            }
+
+
+        }
+
+    
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="cont">
+            <div class="container">
+                <div class="header-left">
+                    <p>Phone: +01 256 25 235</p>
+                    <p>email: info@eiser.com</p>
+                </div>
+                <div class="header-right">
+                    <ul>
+                        <li><a href="">Gift Card</a></li>
+                        <li><a href="">Track Order</a></li>
+                        <li><a href="">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="header-down">
+            <div class="logo">
+                <img src="https://themewagon.github.io/eiser/img/logo.png" alt="">
+                <div class="burger">
+                    <button><i class="fa-solid fa-bars"></i></button>
+                </div>
+            </div>
+            <div class="header-bar-right">
+                <div class="bar">
+                    <ul>
+                        <li><a href="">Home</a></li>
+                        <li><a href="">Shop</a>
+                        </li>
+                        <li><a href="">Blog</a></li>
+                        <li><a href="">Pages</a></li>
+                        <li><a href="">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="bar-right">
+                    <ul>
+                        <li><a href="" class="icon"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+                        <li><a href="" class="icon"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                        <li><a href="" class="icon"><i class="fa-regular fa-user"></i></a></li>
+                        <li><a href="" class="icon"><i class="fa-regular fa-heart"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="section-page">
+        <div class="section-container d-flex">
+            <div class="text-image">
+                <h3>MEN COLLECTION</h3>
+                <h1> <span>Show</span> Your <br> Personal <span>Style</span></h1>
+                <p>Fowl saw dry which a above together place.</p>
+                <div class="collection">
+                    <button>view collection</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="section-2">
+        <div class="inner-section">
+
+            <div class="box-1">
+                <div class="inner-box">
+                    <a href="#"><i class="fa-solid fa-indian-rupee-sign"></i></a>
+                    <h3>Money back gurantee</h3>
+                    <p>Shall open divide a one</p>
+                </div>
+            </div>
+
+            <div class="box-1">
+                <div class="inner-box">
+                    <a href="#"><i class="fa-solid fa-truck"></i></a>
+                    <h3>Free Delivery</h3>
+                    <p>Shall open divide a one</p>
+                </div>
+            </div>
+
+            <div class="box-1">
+                <div class="inner-box">
+                    <a href="#"><i class="fa-solid fa-headphones"></i></a>
+                    <h3>always support</h3>
+                    <p>Shall open divide a one</p>
+                </div>
+            </div>
+            <div class="box-1 ">
+                <div class="inner-box">
+                    <a href="#"><i class="fa-solid fa-shield-halved"></i></a>
+                    <h3>Secure payment</h3>
+                    <p>Shall open divide a one</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="feature-product">
+        <div class="feature-text">
+            <div class="main-text">
+                <span>FEATURED PRODUCT</span>
+            </div>
+            <p>Bring called seed first of third give itself now ment</p>
+        </div>
+    </div>
+    <div class="product-container">
+        <div class="row">
+            <div class="first">
+                <div class="product-1">
+                    <img src="https://themewagon.github.io/eiser/img/product/feature-product/f-p-1.jpg" alt="">
+                </div>
+                <div class="hover-view">
+                    <a href="#"><i class="fa-regular fa-eye"></i></a>
+                    <a href="#"><i class="fa-regular fa-heart"></i></a>
+                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+                <div class="text-box">
+
+                    <a href="#">
+                        <h3>Latest Men Sneaker's</h3>
+                    </a> <br>
+                    <span class="price">$25.00</span>
+                    <del class="d-price">$35.00</del>
+                </div>
+            </div>
+
+
+            <div class="second">
+                <div class="product-1">
+                    <img src="	https://themewagon.github.io/eiser/img/product/feature-product/f-p-2.jpg" alt="">
+                </div>
+                <div class="hover-view">
+                    <a href="#"><i class="fa-regular fa-eye"></i></a>
+                    <a href="#"><i class="fa-regular fa-heart"></i></a>
+                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+                <div class="text-box">
+
+                    <a href="#">
+                        <h3>RED WOMEN PURSE</h3>
+                    </a> <br>
+                    <span class="price">$25.00</span>
+                    <del class="d-price">$35.00</del>
+                </div>
+            </div>
+
+            <div class="third">
+                <div class="product-1">
+                    <img src="https://themewagon.github.io/eiser/img/product/feature-product/f-p-3.jpg" alt="">
+                </div>
+                <div class="hover-view">
+                    <a href="#"><i class="fa-regular fa-eye"></i></a>
+                    <a href="#"><i class="fa-regular fa-heart"></i></a>
+                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+                <div class="text-box">
+                    <a href="#">
+                        <h3>MEN'S STYLISH SMART WATCH</h3>
+                    </a> <br>
+                    <span class="price">$25.00</span>
+                    <del class="d-price">$35.00</del>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="offer-area">
+        <div class="offers">
+            <div class="offer">
+                <h4>ALL MEN’S COLLECTION</h4>
+                <h1>50% off</h1>
+                <div class="discover">
+                    <button>Discover Now</button>
+                </div>
+                <p>Limited Time Offer</p>
+
+            </div>
+        </div>
+    </section>
+    <div class="feature-product">
+        <div class="feature-text">
+            <div class="main-text">
+                <span>NEW PRODUCTS</span>
+            </div>
+            <p>Bring called seed first of third give itself now ment</p>
+        </div>
+    </div>
+    <div class="new-product">
+        <div class="rows">
+            <div class="col-1">
+                <div class="upper-text">
+                    <h3>COLLECTION OF 2019</h3>
+                    <h1>MEN’S SUMMER T-SHIRT</h1>
+                </div>
+                <div class="new-image">
+                    <img src="https://themewagon.github.io/eiser/img/product/new-product/new-product1.png" alt="">
+                </div>
+                <div class="lower-text">
+                    <h1>$120.70</h1>
+                </div>
+                <a href="#" class="main-button">Add to Cart</a>
+            </div>
+            <div class="col-2">
+                <div class="firsts">
+
+                    <div class="product-1">
+                        <img src="https://themewagon.github.io/eiser/img/product/new-product/n1.jpg" alt="">
+                    </div>
+                    <div class="hover-views">
+                        <div class="hov">
+                            <a href="#"><i class="fa-regular fa-eye"></i></a>
+                            <a href="#"><i class="fa-regular fa-heart"></i></a>
+                            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                        </div>
+                        <div class="text-boxes">
+
+                            <a href="#">
+                                <h3>Latest Men Sneaker's</h3>
+                            </a> <br>
+                            <span class="price">$25.00</span>
+                            <del class="d-price">$35.00</del>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="seconds">
+                    <div class="product-1">
+                        <img src="https://themewagon.github.io/eiser/img/product/new-product/n2.jpg" alt="">
+                    </div>
+                    <div class="hover-views">
+                        <div class="hov">
+                            <a href="#"><i class="fa-regular fa-eye"></i></a>
+                            <a href="#"><i class="fa-regular fa-heart"></i></a>
+                            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                        </div>
+                        <div class="text-boxes">
+
+                            <a href="#">
+                                <h3>Latest Men Sneaker's</h3>
+                            </a> <br>
+                            <span class="price">$25.00</span>
+                            <del class="d-price">$35.00</del>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="firsts">
+                    <div class="product-1">
+                        <img src="https://themewagon.github.io/eiser/img/product/new-product/n3.jpg" alt="">
+                    </div>
+                    <div class="hover-views">
+                        <div class="hov">
+                            <a href="#"><i class="fa-regular fa-eye"></i></a>
+                            <a href="#"><i class="fa-regular fa-heart"></i></a>
+                            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                        </div>
+                        <div class="text-boxes">
+
+                            <a href="#">
+                                <h3>Latest Men Sneaker's</h3>
+                            </a> <br>
+                            <span class="price">$25.00</span>
+                            <del class="d-price">$35.00</del>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="seconds">
+                    <div class="product-1">
+                        <img src="https://themewagon.github.io/eiser/img/product/new-product/n4.jpg" alt="">
+                    </div>
+                    <div class="hover-views">
+                        <div class="hov">
+                            <a href="#"><i class="fa-regular fa-eye"></i></a>
+                            <a href="#"><i class="fa-regular fa-heart"></i></a>
+                            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                        </div>
+                        <div class="text-boxes">
+                            <a href="#">
+                                <h3>Latest Men Sneaker's</h3>
+                            </a> <br>
+                            <span class="price">$25.00</span>
+                            <del class="d-price">$35.00</del>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="feature-product">
+        <div class="feature-text">
+            <div class="main-text">
+                <span>INSPIRED PRODUCTS</span>
+            </div>
+            <p>Bring called seed first of third give itself now ment</p>
+        </div>
+    </div>
+
+    <div class="product-container">
+        <div class="product-row">
+            <div class="firsts">
+                <div class="product-1">
+                    <img src="	https://themewagon.github.io/eiser/img/product/inspired-product/i1.jpg" alt="">
+                </div>
+                <div class="hover-views">
+                    <div class="hov">
+                        <a href="#"><i class="fa-regular fa-eye"></i></a>
+                        <a href="#"><i class="fa-regular fa-heart"></i></a>
+                        <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                    </div>
+                    <div class="text-boxes">
+
+                        <a href="#">
+                            <h3>Latest Men Sneaker's</h3>
+                        </a> <br>
+                        <span class="price">$25.00</span>
+                        <del class="d-price">$35.00</del>
+                    </div>
+                </div>
+            </div>
+
+            <div class="seconds">
+                <div class="product-1">
+                    <img src="	https://themewagon.github.io/eiser/img/product/inspired-product/i2.jpg" alt="">
+                </div>
+                <div class="hover-views">
+                    <div class="hov">
+                        <a href="#"><i class="fa-regular fa-eye"></i></a>
+                        <a href="#"><i class="fa-regular fa-heart"></i></a>
+                        <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                    </div>
+                    <div class="text-boxes">
+
+                        <a href="#">
+                            <h3>Latest Men Sneaker's</h3>
+                        </a> <br>
+                        <span class="price">$25.00</span>
+                        <del class="d-price">$35.00</del>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="firsts">
+                <div class="product-1">
+                    <img src="	https://themewagon.github.io/eiser/img/product/inspired-product/i3.jpg" alt="">
+                </div>
+                <div class="hover-views">
+                    <div class="hov">
+                        <a href="#"><i class="fa-regular fa-eye"></i></a>
+                        <a href="#"><i class="fa-regular fa-heart"></i></a>
+                        <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                    </div>
+                    <div class="text-boxes">
+
+                        <a href="#">
+                            <h3>Latest Men Sneaker's</h3>
+                        </a> <br>
+                        <span class="price">$25.00</span>
+                        <del class="d-price">$35.00</del>
+                    </div>
+                </div>
+            </div>
+
+            <div class="seconds">
+                <div class="product-1">
+                    <img src="	https://themewagon.github.io/eiser/img/product/inspired-product/i4.jpg" alt="">
+                </div>
+                <div class="hover-views">
+                    <div class="hov">
+                        <a href="#"><i class="fa-regular fa-eye"></i></a>
+                        <a href="#"><i class="fa-regular fa-heart"></i></a>
+                        <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                    </div>
+                    <div class="text-boxes">
+
+                        <a href="#">
+                            <h3>Latest Men Sneaker's</h3>
+                        </a> <br>
+                        <span class="price">$25.00</span>
+                        <del class="d-price">$35.00</del>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="firsts">
+                <div class="product-1">
+                    <img src="	https://themewagon.github.io/eiser/img/product/inspired-product/i5.jpg" alt="">
+                </div>
+                <div class="hover-views">
+                    <div class="hov">
+                        <a href="#"><i class="fa-regular fa-eye"></i></a>
+                        <a href="#"><i class="fa-regular fa-heart"></i></a>
+                        <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                    </div>
+                    <div class="text-boxes">
+
+                        <a href="#">
+                            <h3>Latest Men Sneaker's</h3>
+                        </a> <br>
+                        <span class="price">$25.00</span>
+                        <del class="d-price">$35.00</del>
+                    </div>
+                </div>
+            </div>
+
+            <div class="seconds">
+                <div class="product-1">
+                    <img src="	https://themewagon.github.io/eiser/img/product/inspired-product/i6.jpg" alt="">
+                </div>
+                <div class="hover-views">
+                    <div class="hov">
+                        <a href="#"><i class="fa-regular fa-eye"></i></a>
+                        <a href="#"><i class="fa-regular fa-heart"></i></a>
+                        <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                    </div>
+                    <div class="text-boxes">
+
+                        <a href="#">
+                            <h3>Latest Men Sneaker's</h3>
+                        </a> <br>
+                        <span class="price">$25.00</span>
+                        <del class="d-price">$35.00</del>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="firsts">
+                <div class="product-1">
+                    <img src="	https://themewagon.github.io/eiser/img/product/inspired-product/i7.jpg" alt="">
+                </div>
+                <div class="hover-views">
+                    <div class="hov">
+                        <a href="#"><i class="fa-regular fa-eye"></i></a>
+                        <a href="#"><i class="fa-regular fa-heart"></i></a>
+                        <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                    </div>
+                    <div class="text-boxes">
+
+                        <a href="#">
+                            <h3>Latest Men Sneaker's</h3>
+                        </a> <br>
+                        <span class="price">$25.00</span>
+                        <del class="d-price">$35.00</del>
+                    </div>
+                </div>
+            </div>
+
+            <div class="seconds">
+                <div class="product-1">
+                    <img src="https://themewagon.github.io/eiser/img/product/inspired-product/i8.jpg" alt="">
+                </div>
+                <div class="hover-views">
+                    <div class="hov">
+                        <a href="#"><i class="fa-regular fa-eye"></i></a>
+                        <a href="#"><i class="fa-regular fa-heart"></i></a>
+                        <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                    </div>
+                    <div class="text-boxes">
+
+                        <a href="#">
+                            <h3>Latest Men Sneaker's</h3>
+                        </a> <br>
+                        <span class="price">$25.00</span>
+                        <del class="d-price">$35.00</del>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="feature-product">
+        <div class="feature-text">
+            <div class="main-text">
+                <span>LATEST PRODUCT</span>
+            </div>
+            <p>Bring called seed first of third give itself now ment</p>
+        </div>
+    </div>
+
+
+    <div class="product-container">
+        <div class="blog-1">
+            <div class="column1">
+                <div class="product-image">
+                    <img src="https://themewagon.github.io/eiser/img/b1.jpg" alt="">
+                </div>
+                <div class="product-text">
+                    <div class="detail">
+                        <a href="#">By Admin</a>
+                        <a href="#" class="detail-a"><i class="fa-regular fa-comment"></i>
+                            <span>2 Comments</span></a>
+                    </div>
+                    <div class="d-block">
+                        <a href="#">
+                            <h4>Ford clever bed stops your sleeping partner hogging the whole</h4>
+                        </a>
+                    </div>
+                    <div class="text-wrap">
+                        <p>
+                            Let one fifth i bring fly to divided face for bearing the divide unto seed winged divided
+                            light
+                            Forth.
+                        </p>
+                    </div>
+                    <div class="blog-button">
+                        <a href="#">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="column1">
+                <div class="product-image">
+                    <img src="https://themewagon.github.io/eiser/img/b2.jpg" alt="">
+                </div>
+                <div class="product-text">
+                    <div class="detail">
+                        <a href="#">By Admin</a>
+                        <a href="#" class="detail-a"><i class="fa-regular fa-comment"></i>
+                            <span>2 Comments</span></a>
+                    </div>
+                    <div class="d-block">
+                        <a href="#">
+                            <h4>Ford clever bed stops your sleeping partner hogging the whole</h4>
+                        </a>
+                    </div>
+                    <div class="text-wrap">
+                        <p>
+                            Let one fifth i bring fly to divided face for bearing the divide unto seed winged divided
+                            light
+                            Forth.
+                        </p>
+                    </div>
+                    <div class="blog-button">
+                        <a href="#">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="column1">
+                <div class="product-image">
+                    <img src="https://themewagon.github.io/eiser/img/b3.jpg" alt="">
+                </div>
+                <div class="product-text">
+                    <div class="detail">
+                        <a href="#">By Admin</a>
+                        <a href="#" class="detail-a"><i class="fa-regular fa-comment"></i>
+                            <span>2 Comments</span></a>
+                    </div>
+                    <div class="d-block">
+                        <a href="#">
+                            <h4>Ford clever bed stops your sleeping partner hogging the whole</h4>
+                        </a>
+                    </div>
+                    <div class="text-wrap">
+                        <p>
+                            Let one fifth i bring fly to divided face for bearing the divide unto seed winged divided
+                            light
+                            Forth.
+                        </p>
+                    </div>
+                    <div class="blog-button">
+                        <a href="#">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="product-container">
+            <div class="product-rows">
+                <div class="top-product">
+                    <ul>
+                        <h4>top product</h4>
+                        <li><a href="#">Managed website</a></li>
+                        <li><a href="#">Managed reputation</a></li>
+                        <li><a href="#">power tools</a></li>
+                        <li><a href="#">Marketing website</a></li>
+                    </ul>
+                </div>
+
+
+
+                <div class="top-product">
+                    <ul>
+                        <h4>Quick Links</h4>
+                        <li><a href="#">Jobs</a></li>
+                        <li><a href="#">Brand Assets</a></li>
+                        <li><a href="#">Investor Relations</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+
+
+                <div class="top-product">
+                    <ul>
+                        <h4>Features</h4>
+                        <li><a href="#">Jobs</a></li>
+                        <li><a href="#">Brand Assets</a></li>
+                        <li><a href="#">Investor Relations</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+
+
+
+                <div class="top-product">
+                    <ul>
+                        <h4>Resources</h4>
+                        <li><a href="#">Guides</a></li>
+                        <li><a href="#">Research</a></li>
+                        <li><a href="#">Experts</a></li>
+                        <li><a href="#">Agencies</a></li>
+                    </ul>
+                </div>
+
+                <div class="top-product">
+                    <ul>
+                        <h4>Newsletter</h4>
+                        <li>
+                            <p class="para">You can trust us. we only send promo offers,</p>
+                        </li>
+                        <form action="">
+                            <input type="email" placeholder="Your Email Address">
+                            <input type="button" value="Subscribe">
+                        </form>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-text">
+                    <p>Copyright ©2024 All rights reserved | This template is made with <span><i
+                                class="fa-regular fa-heart"></i></span>by Colorlib</p>
+                </div>
+                <div class="footer-logo">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-dribbble"></i></a>
+                    <a href="#"><i class="fa-brands fa-behance"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
